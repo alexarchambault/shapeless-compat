@@ -2,23 +2,27 @@ import com.typesafe.sbt.pgp.PgpKeys
 
 lazy val root = project.in(file("."))
   .aggregate(shapelessCompatJVM, shapelessCompatJS)
+  .settings(
+    name := "shapeless-compat-root"
+  )
   .settings(commonSettings)
   .settings(compileSettings)
   .settings(noPublishSettings)
 
 lazy val shapelessCompat = crossProject.in(file("."))
+  .settings(
+    name := "shapeless-compat"
+  )
   .settings(commonSettings: _*)
   .settings(compileSettings: _*)
-  .settings(publishSettings: _*)
   .jsSettings(scalaJSStage in Test := FastOptStage)
 
 lazy val shapelessCompatJVM = shapelessCompat.jvm
 lazy val shapelessCompatJS = shapelessCompat.js
 
 lazy val commonSettings = Seq(
-  organization := "com.github.alexarchambault",
-  name := "shapeless-compat"
-)
+  organization := "com.github.alexarchambault"
+) ++ publishSettings
 
 lazy val compileSettings = Seq(
   scalaVersion := "2.11.7",
