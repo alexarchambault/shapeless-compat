@@ -34,7 +34,8 @@ lazy val compileSettings = Seq(
     if (scalaVersion.value.startsWith("2.10.")) Seq(
       compilerPlugin("org.scalamacros" % "paradise" % "2.0.1" cross CrossVersion.full)
     ) else Nil
-  }
+  },
+  scalacOptions += "-target:jvm-1.7"
 )
 
 lazy val publishSettings = Seq(
