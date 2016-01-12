@@ -15,7 +15,7 @@ resolvers += Resolver.sonatypeRepo("releases")
 libraryDependencies += "com.github.alexarchambault" %% "shapeless-compat" % "1.0.0-M1"
 ```
 
-Adds `Lazy` (with `LazyExtensions`), `Strict`, `LowPriority`, `Cached`, `Widen`, `Default`, etc. in the `shapeless.compat` namespace.
+Adds `Lazy` (with `LazyExtensions`), `Strict`, `LowPriority` ([#514](https://github.com/milessabin/shapeless/pull/514)), `Cached`, `Widen`, `Default`, etc. in the `shapeless.compat` namespace.
 
 Released against both scala 2.10 and 2.11, and against scala JS too.
 
