@@ -12,7 +12,7 @@ Add to your `build.sbt`
 ```scala
 resolvers += Resolver.sonatypeRepo("releases")
 
-libraryDependencies += "com.github.alexarchambault" %% "shapeless-compat" % "1.0.0-M2"
+libraryDependencies += "com.github.alexarchambault" %% "shapeless-compat" % "1.0.0-M3"
 ```
 
 Adds `Lazy` (with `LazyExtensions`), `Strict`, `LowPriority` ([#514](https://github.com/milessabin/shapeless/pull/514)), `Cached`, `Widen`, `Default`, etc. in the `shapeless.compat` namespace.
