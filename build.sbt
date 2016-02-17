@@ -39,7 +39,7 @@ lazy val compileSettings = Seq(
       compilerPlugin("org.scalamacros" % "paradise" % "2.0.1" cross CrossVersion.full)
     ) else Nil
   },
-  scalacOptions += "-target:jvm-1.7"
+  scalacOptions += "-target:jvm-1.6"
 )
 
 lazy val publishSettings = Seq(
