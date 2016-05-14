@@ -1,0 +1,7 @@
+Mostly a update of most dependencies versions
+
+### Changes
+
+* Switch to scala 2.11.8, scala-js 0.6.9 ([#3])
+
+[#3]: https://github.com/alexarchambault/shapeless-compat/pull/3
