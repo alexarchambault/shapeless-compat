@@ -27,7 +27,6 @@ lazy val commonSettings = Seq(
 lazy val compileSettings = Seq(
   scalaVersion := "2.11.7",
   crossScalaVersions := Seq("2.10.6", "2.11.7"),
-  unmanagedSourceDirectories in Compile += (baseDirectory in Compile).value / ".." / "shared" / "src" / "main" / s"scala-${scalaBinaryVersion.value}",
   libraryDependencies ++= Seq(
     "com.chuusai" %%% "shapeless" % "2.2.5",
     "com.novocode" % "junit-interface" % "0.7" % "test",
