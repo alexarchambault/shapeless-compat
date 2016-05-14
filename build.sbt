@@ -15,7 +15,11 @@ lazy val shapelessCompat = crossProject.in(file("."))
   )
   .settings(commonSettings: _*)
   .settings(compileSettings: _*)
-  .jsSettings(scalaJSStage in Test := FastOptStage)
+  .jsSettings(
+    postLinkJSEnv := NodeJSEnv().value,
+    scalaJSUseRhino in Global := false,
+    scalaJSStage in Test := FastOptStage
+  )
 
 lazy val shapelessCompatJVM = shapelessCompat.jvm
 lazy val shapelessCompatJS = shapelessCompat.js
