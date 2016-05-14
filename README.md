@@ -3,6 +3,8 @@
 Backport of various things from [shapeless](https://github.com/milessabin/shapeless) 2.3 to shapeless 2.2
 
 [![Build Status](https://travis-ci.org/alexarchambault/shapeless-compat.svg)](https://travis-ci.org/alexarchambault/shapeless-compat)
+[![Maven Central](https://img.shields.io/maven-central/v/com.github.alexarchambault/shapeless-compat_2.11.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.alexarchambault/shapeless-compat_2.11)
+
 
 Mainly for use by [argonaut-shapeless](https://github.com/alexarchambault/argonaut-shapeless), [scalacheck-shapeless](https://github.com/alexarchambault/scalacheck-shapeless), and [case-app](https://github.com/alexarchambault/case-app).
 
@@ -12,7 +14,7 @@ Add to your `build.sbt`
 ```scala
 resolvers += Resolver.sonatypeRepo("releases")
 
-libraryDependencies += "com.github.alexarchambault" %% "shapeless-compat" % "1.0.0-M3"
+libraryDependencies += "com.github.alexarchambault" %% "shapeless-compat" % "1.0.0-M4"
 ```
 
 Adds `Lazy` (with `LazyExtensions`), `Strict`, `LowPriority` ([#514](https://github.com/milessabin/shapeless/pull/514)), `Cached`, `Widen`, `Default`, etc. in the `shapeless.compat` namespace.
