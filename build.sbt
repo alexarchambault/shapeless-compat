@@ -25,8 +25,7 @@ lazy val commonSettings = Seq(
 ) ++ publishSettings
 
 lazy val compileSettings = Seq(
-  scalaVersion := "2.11.7",
-  crossScalaVersions := Seq("2.10.6", "2.11.7"),
+  scalaVersion := "2.11.8",
   libraryDependencies ++= Seq(
     "com.chuusai" %%% "shapeless" % "2.2.5",
     "com.novocode" % "junit-interface" % "0.7" % "test",
