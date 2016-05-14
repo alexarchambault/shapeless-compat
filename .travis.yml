@@ -1,6 +1,6 @@
 language: scala
 scala:
-- 2.11.7
+- 2.11.8
 - 2.10.6
 jdk:
 - oraclejdk8
@@ -11,3 +11,6 @@ env:
   global:
   - secure: acO0WPLGcoleibCRfnyR9j1tUDDHARwQJf8UhfnMcziyE7Lk4L/ylj4DeXRy2iXR040XSEmF8gN+WKtASoFjvIlte85/bUVE+s/r6jZgTYvW0+iYX5jAiO/rg/lgZAuc3u/EjwdV4UT2V+rj9eMmAxEH7OQr2GvueoP6sWk5KztjuzvULLlmWn0TKeJJ1eQ+IHPsjjr03VR2y2dFK91OcliDInV/qYNRMLLI0E3eco1gz4bF+/38dgs/XSwhycjRZ1wo3lbs6hW/BgrOMAE9aWdjxMACXbRS/pB9y7bCZaGkSnK6l3MYhoFfVNN+kc5A8B7I+Q2lkQkY8gZbrYFjWI75kmLEwRvlmC5OwQCpjRtYhRoM4h8PIstKgCNHx5jBqc8oPJJtJ+Zfrh/Oee1rglWAwQbPIWmWkFFQrC+CoeIZZW0P/15p/D4uixhTFHMpEa+mC1NVQTC2fwA79J6AGHECn1z5YLgr6M9ynW6Tv9+UQMiiFUKOG2C5yXp8WBX+UitNTEtR1FMwMwbR7mst2rnzcR2wU/Mp4bB92NBoIqEVguquN3bFU9z0qwesVWEu+BP2Umsf+ir6jaaZ7jTM1ei0jz0j/A3w7+dtz5urtBeII6HwRUX/ww+muIy83/QC1z0cj4GCK4AMMPH3Htl3KWrNil/lILUUm9agcbY+AvE=
   - secure: ZSqP3oLwM2XlPEMmb5M7Rz8P8tRZTPtcZCNKHNz4dPfXhO5iTrycXRx6dXE/mw4jxdRrGMdxIpxIa1V0+pxrTHZji2thm4FrQrx5DezcxIeQJFgkNOh3iIK1vFHeUVpf0Zp9VjBxko65Wueny/I8mBn4f0v1hrI+LA5DtmvFvEuGQxOZzefPvsdkxu2FNNdo845JQwNB7Bc9M5nl2dxVaR6r5ZyhOMoqpq/tDxKO5/7amCSjk0bV/tJUE3ab785l73aGvleOSzu3efPGvqfwMkgbp+W/W1/+eiZ5X7cAPQUi/DBYoLF+y7dbgSbIYfBJveL8mQNlr5sME6QK+xgd7/OLZtjHeSkUjUttfgDTTeh6Jwrpp3ZJY+iGFvmplXIYDwm4DjXt1aX8HLJEpmZz8cJ4abyAZGJ0XHhmkI0B6qGvtuOeUrREKBRQBkHAGvg868qA+V/Ydg9TYE4jjAX9+QWUdTmNPiGgsBphJC8V+wgETpLeqsZGa7+oIyT40xwKjsjuNsRm2tQyLyvdrm+BQgcWRobASU0lnS4o2T1tA7tejpjxDuv2p/7yfJIirosVhEOsbhCr2U18BXYEiI4O1zWyHRJlhlT7+7Vcaf3ggOw56rZxxw4BeoDj3YUHmxy+zbqyd/R9CbjjwxSyB85tQKegI/SpGUxIuvNTGGx/BFI=
+branches:
+  only:
+  - master

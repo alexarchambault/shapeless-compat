@@ -15,7 +15,11 @@ lazy val shapelessCompat = crossProject.in(file("."))
   )
   .settings(commonSettings: _*)
   .settings(compileSettings: _*)
-  .jsSettings(scalaJSStage in Test := FastOptStage)
+  .jsSettings(
+    postLinkJSEnv := NodeJSEnv().value,
+    scalaJSUseRhino in Global := false,
+    scalaJSStage in Test := FastOptStage
+  )
 
 lazy val shapelessCompatJVM = shapelessCompat.jvm
 lazy val shapelessCompatJS = shapelessCompat.js
@@ -25,9 +29,7 @@ lazy val commonSettings = Seq(
 ) ++ publishSettings
 
 lazy val compileSettings = Seq(
-  scalaVersion := "2.11.7",
-  crossScalaVersions := Seq("2.10.6", "2.11.7"),
-  unmanagedSourceDirectories in Compile += (baseDirectory in Compile).value / ".." / "shared" / "src" / "main" / s"scala-${scalaBinaryVersion.value}",
+  scalaVersion := "2.11.8",
   libraryDependencies ++= Seq(
     "com.chuusai" %%% "shapeless" % "2.2.5",
     "com.novocode" % "junit-interface" % "0.7" % "test",
@@ -67,12 +69,12 @@ lazy val publishSettings = Seq(
     else
       "releases" at nexus + "service/local/staging/deploy/maven2"
   },
-  credentials += {
+  credentials ++= {
     Seq("SONATYPE_USER", "SONATYPE_PASS").map(sys.env.get) match {
       case Seq(Some(user), Some(pass)) =>
-        Credentials("Sonatype Nexus Repository Manager", "oss.sonatype.org", user, pass)
+        Seq(Credentials("Sonatype Nexus Repository Manager", "oss.sonatype.org", user, pass))
       case _ =>
-        Credentials(Path.userHome / ".ivy2" / ".credentials")
+        Seq.empty
     }
   }
 )
